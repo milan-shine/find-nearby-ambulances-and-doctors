@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Button } from '../Button';
 import { EditIcon, TrashIcon } from 'lucide-react';
 import axios from 'axios';
+import defaultAmbulance from "../../assets/ambulance.jpg"
 
 type AmbulanceItemProps = {
     ambulance: Ambulance,
@@ -38,7 +39,7 @@ const AmbulanceItem: React.FC<AmbulanceItemProps> = ({ ambulance, isManaging, ha
                 <p>{ambulance.description}</p>
                 <p>Location: {ambulance.location}</p>
             </AmbulanceDetails>
-            <img src={ambulance.image ? ambulance.image : ''} alt={ambulance.title} height={100} />
+            <img src={ambulance.image ? ambulance.image : defaultAmbulance} alt={ambulance.title} height={100} />
             {isManaging ? <ActionButtonContainer>
                 <Button onClick={handleAmbulanceItemDelete}>
                     <TrashIcon size={20} />

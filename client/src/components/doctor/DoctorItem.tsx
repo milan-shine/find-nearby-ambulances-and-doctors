@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Button } from '../Button';
 import { EditIcon, TrashIcon } from 'lucide-react';
 import axios from 'axios';
+import defaultImage from "../../assets/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
 
 type DoctorItemProps = {
     doctor: Doctor,
@@ -38,7 +39,7 @@ const DoctorItem: React.FC<DoctorItemProps> = ({ doctor, isManaging, handleEditI
                 <p>{doctor.description}</p>
                 <p>Location: {doctor.location}</p>
             </DoctorDetails>
-            <img src={doctor.image ? doctor.image : ''} alt={doctor.title} height={100} />
+            <img src={doctor.image ? doctor.image : defaultImage} alt={doctor.title} height={100} />
             {isManaging ? <ActionButtonContainer>
                 <Button onClick={handleDoctorItemDelete}>
                     <TrashIcon size={20} />
@@ -52,7 +53,6 @@ const DoctorItem: React.FC<DoctorItemProps> = ({ doctor, isManaging, handleEditI
 }
 
 export default DoctorItem;
-
 
 const StyledDiv = styled.div`
   margin-bottom: 15px;

@@ -23,7 +23,6 @@ type AmbulanceListProps = {
 }
 
 const AmbulanceList: React.FC<AmbulanceListProps> = ({ refetch, setRefetch, isManaging = false, handleEditItem }) => {
-
     const [ambulances, setAmbulances] = useState<Ambulance[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
