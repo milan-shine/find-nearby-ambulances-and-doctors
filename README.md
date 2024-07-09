@@ -4,6 +4,8 @@
 
 This application is designed to help users find nearby ambulance services and doctors. Built with a Vite.js frontend and a Node.js backend, it allows users to perform CRUD operations on ambulance and doctor records. The app supports pagination, displays a total count of records, and handles loading, error, and empty states gracefully.
 
+Demo: https://find-nearby-ambulances-and-doctors.vercel.app
+
 ## Features
 
 - **Frontend**:
@@ -36,40 +38,12 @@ git clone https://github.com/milan-shine/find-nearby-ambulances-and-doctors.git
 cd find-nearby-ambulances-and-doctors
 ```
 
-2. Install dependencies for both frontend and backend:
-
-```bash
-# Install frontend dependencies
-cd client
-npm install
-
-# Install backend dependencies
-cd ../server
-npm install
-```
-
 3. Create a `.env` file in the `frontend` directory and add your Cloudinary configuration and Backend configuration:
 
 ```env
-VITE_API_URL=
+VITE_API_URL= "backend url"
 VITE_COUDINARY_CLOUD_NAME=
 VITE_COUDINARY_UPLOAD_PRESET=
-```
-
-#### Running the App
-
-1. Start the backend server:
-
-```bash
-cd server
-npm run dev
-```
-
-2. Start the frontend development server:
-
-```bash
-cd client
-npm start
 ```
 
 3. Open your browser and navigate to `http://localhost:3000`.
